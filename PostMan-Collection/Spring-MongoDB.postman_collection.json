@@ -1,0 +1,136 @@
+{
+	"info": {
+		"_postman_id": "85efcb40-7493-45e0-9fcc-60f7f7e48342",
+		"name": "Spring-MongoDB",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Save Department",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"name\":\"prashanth\",\r\n\t\"description\": \"java\",\r\n\t\"employees\":[\r\n\t\t{\r\n\t\t\"empId\":\"2754\",\r\n \t\t\"age\":25,\r\n\t\t\"salary\":542452\r\n\t\t}\r\n\t\t\r\n\t]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/dept",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"dept"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Department",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"name\":\"lavish\",\r\n\t\"description\": \"mongoDB\",\r\n\t\"employees\":[\r\n\t\t{\r\n\t\t\"empId\":\"2587\",\r\n \t\t\"age\":23,\r\n\t\t\"salary\":434241\r\n\t\t}\r\n\t\t\r\n\t]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/dept/5de8f67cddfe0f7273b1f2e8",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"dept",
+						"5de8f67cddfe0f7273b1f2e8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find Department By Employee Name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/dept/lavish/emp",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"dept",
+						"lavish",
+						"emp"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "findAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/dept",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"dept"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete department ID record",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/dept/5de8f67cddfe0f7273b1f2e8",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"dept",
+						"5de8f67cddfe0f7273b1f2e8"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
