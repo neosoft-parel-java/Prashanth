@@ -1,0 +1,117 @@
+{
+	"info": {
+		"_postman_id": "d6059a58-2a93-4ffc-b7c9-799a64bfb3c4",
+		"name": "Spring-MongoDB-SortNumbers",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Retrieve All",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/sort",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"sort"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete By ID",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/sort/5dee39a07468582c7252b16f",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"sort",
+						"5dee39a07468582c7252b16f"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update by ID",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"_1_10\":1,\n\t\"_11_20\":11,\n\t\"_21_30\":21,\n\t\"_31_40\":31,\n\t\"_41_50\":41,\n\t\"_51_60\":51,\n\t\"_61_70\":61,\n\t\"_71_80\":71,\n\t\"_81_90\":81\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/sort/5dee394c7468582c7252b16d",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"sort",
+						"5dee394c7468582c7252b16d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create SortNumbers ",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"_1_10\":3,\n\t\"_11_20\":14,\n\t\"_21_30\":25,\n\t\"_31_40\":36,\n\t\"_41_50\":47,\n\t\"_51_60\":58,\n\t\"_61_70\":69,\n\t\"_71_80\":71,\n\t\"_81_90\":82\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/sort",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"sort"
+					]
+				},
+				"description": "Step1: Only 3 Rows & 9 Columns \nStep2: Validation is Ascending Order with in row & 9 columns has its own range . "
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
