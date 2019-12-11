@@ -1,0 +1,349 @@
+{
+	"info": {
+		"_postman_id": "1b095870-1261-46bc-b1d4-858483637fb4",
+		"name": "Mojo Pizza App",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Deliver",
+			"item": [
+				{
+					"name": "Create Deliver",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"deliverBoyName\":\"Sattar\",\r\n\t\"orderNumber\": \"456123\",\r\n\t\"feedBack\":\"Negitive\",\r\n\t\"rating\":\"**\",\r\n\t\"orders\":[\r\n\t\t{\r\n\t\t\"id\":\"2\",\r\n\t\t\"orderNumber\":\"456123\",\r\n \t\t\"kitchens\":[\r\n \t\t\t{\r\n \t\t\t\"id\":\"2\",\r\n \t\t\t\"vegtItems\":\"VegPizza\",\r\n \t\t\t\"nonVegItems\":\"ChickenPizza\"\r\n \t\t\t}\r\n \t\t  ]\r\n\t\t}\r\n\t\t\r\n\t]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/deliver/create",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"deliver",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Deliver",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"deliverBoyName\":\"Rishabha\",\r\n\t\"orderNumber\": \"123456\",\r\n\t\"feedBack\":\"Nuetral\",\r\n\t\"rating\":\"***\",\r\n\t\"orders\":[\r\n\t\t{\r\n\t\t\"id\":\"2\",\r\n\t\t\"orderNumber\":\"123456\",\r\n \t\t\"kitchens\":[\r\n \t\t\t{\r\n \t\t\t\"id\":\"2\",\r\n \t\t\t\"vegtItems\":\"VegCornPizza\",\r\n \t\t\t\"nonVegItems\":\"ChickenChilliPizza\"\r\n \t\t\t}\r\n \t\t  ]\r\n\t\t}\r\n\t\t\r\n\t]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/deliver/5df0ba099cd27a0ae124bdb8",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"deliver",
+								"5df0ba099cd27a0ae124bdb8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Retrieve All Deliver Details",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/deliver",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"deliver"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Deliver",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/deliver/5df0b739cd79e646917f13ae",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"deliver",
+								"5df0b739cd79e646917f13ae"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Kitchen",
+			"item": [
+				{
+					"name": "Delete kitchen",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/kitchen/5df0c2785890521c574a5cdc",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"kitchen",
+								"5df0c2785890521c574a5cdc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Retrieve All kitchen Details",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/kitchen",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"kitchen"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update kitchen",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n \t\t\t\"vegtItems\":\"VegCornPizza\",\r\n \t\t\t\"nonVegItems\":\"ChickenChilliPizza\"\r\n\t\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/kitchen/5df0c2355890521c574a5cdb",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"kitchen",
+								"5df0c2355890521c574a5cdb"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Kitchen",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n \t\t\t\"vegtItems\":\"CheezeVegPizza\",\r\n \t\t\t\"nonVegItems\":\"CheezeChickenPizza\"\r\n \t\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/kitchen/create",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"kitchen",
+								"create"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Order",
+			"item": [
+				{
+					"name": "Create Order",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n \t\t\t\"orderNumber\":\"123456\",\r\n \t\t\t\"kitchens\":[\r\n \t\t\t\t{\r\n \t\t\t\t\t\"id\":\"5df0c2355890521c574a5cdb\",\r\n\t\t\t\t\t\"vegtItems\":\"CheezeVegPizza\",\r\n \t\t\t\t\t\"nonVegItems\":\"CheezeChickenPizza\"\r\n \t\t\t\t}\r\n \t\t\t]\r\n \t\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/order/create",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"order",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update order",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n \t\t\t\"orderNumber\":\"456789\",\r\n \t\t\t\"kitchens\":[\r\n \t\t\t\t{\r\n \t\t\t\t\t\"id\":\"5df0c2355890521c574a5cdb\",\r\n\t\t\t\t\t\"vegtItems\":\"VegPizza\",\r\n \t\t\t\t\t\"nonVegItems\":\"ChickenPizza\"\r\n \t\t\t\t}\r\n \t\t\t]\r\n \t\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/order/5df0c2355890521c574a5cdb",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"order",
+								"5df0c2355890521c574a5cdb"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Retrieve All order Details",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/order",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"order"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete order",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/kitchen/5df0c4a75890521c574a5cdf",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"kitchen",
+								"5df0c4a75890521c574a5cdf"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

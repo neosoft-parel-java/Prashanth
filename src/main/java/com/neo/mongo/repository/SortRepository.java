@@ -1,6 +1,8 @@
 package com.neo.mongo.repository;
 
+import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Stream;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
@@ -16,7 +18,7 @@ public class SortRepository {
 
 	@Autowired
 	private MongoTemplate mongoTemplate;
-	
+
 	public SortNumbers save(SortNumbers sortNumbers) {
 		mongoTemplate.save(sortNumbers);
 		return sortNumbers;
@@ -37,7 +39,7 @@ public class SortRepository {
 		update.set("_81_90", sortNumbers.get_81_90());
 		return mongoTemplate.findAndModify(query, update, SortNumbers.class);
 	}
-	
+
 	public List findAll() {
 		return mongoTemplate.findAll(SortNumbers.class);
 	}
@@ -46,6 +48,6 @@ public class SortRepository {
 		Query query = new Query();
 		query.addCriteria(Criteria.where("id").is(id));
 		mongoTemplate.remove(query, SortNumbers.class);
-		
+
 	}
 }
